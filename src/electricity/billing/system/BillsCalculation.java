@@ -13,36 +13,42 @@ public class BillsCalculation extends JFrame implements ActionListener{
     JPanel JP;
     BillsCalculation(){
         
+        //Display background of the BillsCalculation page.
         JP = new JPanel();
         JP.setLayout(null);
         JP.setBackground (new Color(255,253,208));
         
+        //Display the text "Electricity Bills Calculations"
         JL1 = new JLabel("Electricity Bills Calculations");
         JL1.setBounds(30, 10, 400, 50);
         JL1.setForeground(new Color(0,0,138));
                 
-        
-        
+        //Display the text "Meter No"        
         JL2 = new JLabel("Meter No");
         JL2.setBounds(60, 70, 120, 30); 
         JL2.setFont(new Font("Times New Roman",Font.PLAIN,15));
         
+        //Display the text "Customer Name"
         JLabel L6 = new JLabel("Customer Name");
         L6.setBounds(60, 120, 120, 30);
         L6.setFont(new Font("Times New Roman",Font.PLAIN,15));
         
+        //Display the text "Customer Address"
         JLabel L7 = new JLabel("Customer Address");
         L7.setBounds(60, 170, 120, 30);
         L7.setFont(new Font("Times New Roman",Font.PLAIN,15));
         
+        //Display the text "Month"
         JL3 = new JLabel("Month");
         JL3.setBounds(60, 220, 120, 30);
         JL3.setFont(new Font("Times New Roman",Font.PLAIN,15));
         
+        //Display the text "Unit used per month"
         JL5 = new JLabel("Unit used per month");
-        JL5.setBounds(60, 270, 120, 30);
+        JL5.setBounds(60, 270, 140, 30);
         JL5.setFont(new Font("Times New Roman",Font.PLAIN,15));
         
+        //Get the customer meter_number from database and let the admin choose
         C1 = new Choice();
         C1.setBounds(200, 75, 180, 30);
         try{
@@ -61,6 +67,7 @@ public class BillsCalculation extends JFrame implements ActionListener{
         L12.setBounds(200, 174, 180, 20);
         JP.add(L12);
         
+        //Display the name and address of the customer from database that admin choose from customer meter number
         try{
             DBConnection c = new DBConnection();
             ResultSet rs = c.s.executeQuery("select * from customer where customer_meter = '"+C1.getSelectedItem()+"'");
@@ -69,6 +76,7 @@ public class BillsCalculation extends JFrame implements ActionListener{
                 L12.setText(rs.getString("customer_address"));
             }
         }catch(Exception e){}
+        
         
         C1.addItemListener(new ItemListener(){
             public void itemStateChanged(ItemEvent ae){
@@ -102,6 +110,8 @@ public class BillsCalculation extends JFrame implements ActionListener{
         C2.add("November");
         C2.add("December");
         
+        //Display the "Proceed" and "Cancel" button. 
+        //The units_used by customer will added to database if "Proceed" is clicked
         JB1 = new JButton("Proceed");
         JB1.setBounds(110, 360, 110, 30);
         JB2 = new JButton("Cancel");
@@ -115,6 +125,7 @@ public class BillsCalculation extends JFrame implements ActionListener{
         JB2.setForeground(Color.BLACK);
         JB2.setFont(new Font("Times New Roman",Font.PLAIN,15));
         
+        //Display the icon 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/hicon2.png"));
         Image i2 = i1.getImage().getScaledInstance(180, 230,Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -159,6 +170,7 @@ public class BillsCalculation extends JFrame implements ActionListener{
             String units_used = TF1.getText();
             String months = C2.getSelectedItem();
 
+            //Declare the variables
             int units_consumed = Integer.parseInt(units_used);
 
             float bill_amount = 0.0f;
@@ -166,6 +178,7 @@ public class BillsCalculation extends JFrame implements ActionListener{
             float total_amount_2;
             float total_amount_3;
             
+            //Demonstrate the calculation of total amount of bill_amount
             try{
                 DBConnection c = new DBConnection();
                 ResultSet rs = c.s.executeQuery("select * from taxes");
