@@ -5,18 +5,22 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class Payment extends JFrame implements ActionListener{
-    String meter;
-    JButton JB1;
+    String meter;//declare string meter
+    JButton JB1;//declare button JB1
     Payment(String meter){
         this.meter = meter;
         JEditorPane JEP = new JEditorPane();
-        JEP.setEditable(false);   
-        
+        JEP.setEditable(false); 
+
+        //declare and initialize return button
         JB1 = new JButton("Return");
+        //set the background color and font color of return button
         JB1.setBackground(Color.DARK_GRAY);
         JB1.setForeground(Color.WHITE);
+        //set bounds (int x, int y, int width, int height)
         JB1.setBounds(500, 20, 120, 25);
         JB1.addActionListener(this);
+        //set the font style of return button
         JB1.setFont(new Font("Times New Roman",Font.PLAIN,15));
         JEP.add(JB1);
 

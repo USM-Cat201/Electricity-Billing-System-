@@ -7,12 +7,13 @@ import javax.swing.*;
 import java.sql.*;
 
 public class BillGenerator extends JFrame implements ActionListener{
-    JButton JB1;
-    JPanel JP1;
-    JLabel JL1, JL2;
-    JTextArea JTA1;
-    Choice C1;
-    String meter;
+    JButton JB1;//declare button JB1
+    JPanel JP1;//declare panel JP1
+    JLabel JL1, JL2; //declare two labels which is JL1 and JL2
+    JTextArea JTA1; //declare textarea JTA1
+    Choice C1; //declare choice option C1
+    String meter; //declare string meter
+    
     BillGenerator(String meter){
         this.meter = meter;
         setLayout(new BorderLayout());
@@ -23,8 +24,8 @@ public class BillGenerator extends JFrame implements ActionListener{
         JL1 = new JLabel("Generate Bill");
         
         JL2 = new JLabel(meter);
+        //initialize the choice from January to December
         C1 = new Choice();
-        
         C1.add("January");
         C1.add("February");
         C1.add("March");
@@ -38,21 +39,22 @@ public class BillGenerator extends JFrame implements ActionListener{
         C1.add("November");
         C1.add("December");
 
-        
+        //leave the text so user know that they need to press the button to generate bills
         JTA1 = new JTextArea(50,15);
         JTA1.setText("\tPress 'Generate Bill' button");
         JScrollPane jsp = new JScrollPane(JTA1);
         JTA1.setFont(new Font("Helvetica",Font.BOLD,20));
-        
+
+        //initialize the button so user can generate bill after pressing this button
         JB1 = new JButton("Generate Bills");
         
         JP1.add(JL1);
         JP1.add(JL2);
         JP1.add(C1);
-        add(JP1,"North");
+        add(JP1,"North");//the text of generate bill and the month option will be shown at the top of the windows
         
         add(jsp,"Center");
-        add(JB1,"South");
+        add(JB1,"South");// the button will be shown at the bottom of windows
         
         JB1.addActionListener(this);
         
