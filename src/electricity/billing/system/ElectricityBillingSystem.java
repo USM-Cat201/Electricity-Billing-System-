@@ -10,22 +10,23 @@ import javax.swing.JFrame;
 import javax.swing.border.Border;
 
 public class ElectricityBillingSystem extends JFrame implements ActionListener {
-    Font font, font1, font2;
-    TextArea TA1;
-    JButton JB1;
-    JLabel JL1;
-    String str;
+    Font font, font1, font2;//declare 3 fonts font, font1 and font2
+    TextArea TA1;//declare text area TA1
+    JButton JB1;//declare button JB1
+    JLabel JL1;//declare label JL1
+    String str;//declare string str
 
     public ElectricityBillingSystem() {
 
         setLayout(null);
-        JButton JB1 = new JButton("Close");
+        JButton JB1 = new JButton("Close");//initialize close button
         add(JB1);
         JB1.setBounds(180, 430, 120, 20);
         JB1.addActionListener(this);
 
         Font F = new Font("Helvetica", Font.BOLD, 180);
         setFont(F);
+        //show the message of the CAT201 Project
 
         str = "                        About CAT201 Projects"
                 + "\nElectricity Billing System is a desktop-based application "

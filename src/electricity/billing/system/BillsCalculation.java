@@ -6,11 +6,11 @@ import javax.swing.*;
 import java.sql.*;
 
 public class BillsCalculation extends JFrame implements ActionListener{
-    JLabel JL1,JL2,JL3,JL4,JL5;
-    JTextField TF1;
-    Choice C1,C2;
-    JButton JB1,JB2;
-    JPanel JP;
+    JLabel JL1,JL2,JL3,JL4,JL5; //declare FIVE labels from JL1 to JL5
+    JTextField TF1; //declare one text field TF1
+    Choice C1,C2; //declare two choices C1 and C2
+    JButton JB1,JB2; //declare two buttons JB1 and JB2
+    JPanel JP; //declare panel
     BillsCalculation(){
         
         //Display background of the BillsCalculation page.
