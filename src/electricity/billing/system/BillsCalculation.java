@@ -94,7 +94,7 @@ public class BillsCalculation extends JFrame implements ActionListener{
         TF1 = new JTextField();
         TF1.setBounds(200, 274, 180, 20);
         
-        
+        //Choose the month that wanted to enter the unit used.
         C2 = new Choice();
         C2.setBounds(200, 224, 180, 20);
         C2.add("January");
