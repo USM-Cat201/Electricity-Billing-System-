@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package electricity.billing.system;
 
 import java.awt.*;
@@ -17,7 +13,7 @@ public class BillsInformation extends JFrame{
     String y[][] = new String[40][8];
     int i=0, j=0;
     BillsInformation(String meter){
-        super("Bill Information");
+        super("Bills");
         setSize(800,650);
         setLocation(500,250);
         setLayout(null);

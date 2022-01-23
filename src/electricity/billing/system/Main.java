@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package electricity.billing.system;
 
 import java.awt.*;
@@ -16,14 +12,14 @@ public class Main extends JFrame implements ActionListener{
         
         setSize(1300,800);
         
-        /* Adding background image */
+        /* background image */
         ImageIcon IC1 =  new ImageIcon(ClassLoader.getSystemResource("icon/elect1.jpg"));
         Image img3 = IC1.getImage().getScaledInstance(1350, 750,Image.SCALE_DEFAULT);
         ImageIcon IC3 = new ImageIcon(img3);
         JLabel L1 = new JLabel(IC3);
         add(L1);
        
-        /* First Column */
+        /* Features Column for admin homepage */
         JMenuBar Jmb  = new JMenuBar();
         JMenu features = new JMenu("Features");
         JMenuItem JM1 = new JMenuItem("Add New Customer");
@@ -32,30 +28,30 @@ public class Main extends JFrame implements ActionListener{
         features.setForeground(Color.BLACK);
         
         
-        /* ---- Customer Details ---- */
+        /* Add New Customer */
         JM1.setFont(new Font("monospaced",Font.PLAIN,12));
         ImageIcon icon1 = new ImageIcon(ClassLoader.getSystemResource("icon/icon1.png"));
         Image image1 = icon1.getImage().getScaledInstance(20, 20,Image.SCALE_DEFAULT);
         JM1.setIcon(new ImageIcon(image1));
-        JM1.setMnemonic('D');
+        JM1.setMnemonic('A');
         JM1.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_D, ActionEvent.CTRL_MASK));
         JM1.setBackground(Color.WHITE);
         
-        /* ---- Meter Details ---- */
+        /* View Customer Information */
         JM2.setFont(new Font("monospaced",Font.PLAIN,12));
         ImageIcon icon2 = new ImageIcon(ClassLoader.getSystemResource("icon/icon2.png"));
         Image image2 = icon2.getImage().getScaledInstance(20, 20,Image.SCALE_DEFAULT);
         JM2.setIcon(new ImageIcon(image2));
-        JM2.setMnemonic('M');
+        JM2.setMnemonic('I');
         JM2.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M, ActionEvent.CTRL_MASK));
         JM2.setBackground(Color.WHITE);
         
-        
+        /*Calculate Bill*/
         JM4.setFont(new Font("monospaced",Font.PLAIN,12));
         ImageIcon icon5 = new ImageIcon(ClassLoader.getSystemResource("icon/icon5.png"));
         Image image5 = icon5.getImage().getScaledInstance(20, 20,Image.SCALE_DEFAULT);
         JM4.setIcon(new ImageIcon(image5));
-        JM4.setMnemonic('B');
+        JM4.setMnemonic('C');
         JM4.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_B, ActionEvent.CTRL_MASK));
         JM4.setBackground(Color.WHITE);
         
@@ -68,28 +64,28 @@ public class Main extends JFrame implements ActionListener{
         
         //-----------------------------
         
-        /* Second Column */
+        /* Information column for customer homepage */
         JMenu menu = new JMenu("Information");
         JMenuItem menu1 = new JMenuItem("Renew Information");
         JMenuItem menu2 = new JMenuItem("View Information");
         
         menu.setForeground(Color.RED);
         
-        /* ---- Pay Bill ---- */
+        /* Renew Information */
         menu1.setFont(new Font("Times New Roman",Font.PLAIN,12));
         ImageIcon icon41 = new ImageIcon(ClassLoader.getSystemResource("icon/icon4.png"));
         Image image41 = icon41.getImage().getScaledInstance(20, 20,Image.SCALE_DEFAULT);
         menu1.setIcon(new ImageIcon(image41));
-        menu1.setMnemonic('P');
+        menu1.setMnemonic('R');
         menu1.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, ActionEvent.CTRL_MASK));
         menu1.setBackground(Color.WHITE);
         
-        /* ---- Last Bill ----*/
+        /*View Information*/
         menu2.setFont(new Font("Times New Roman",Font.PLAIN,12));
         ImageIcon icon42 = new ImageIcon(ClassLoader.getSystemResource("icon/icon6.png"));
         Image image42 = icon42.getImage().getScaledInstance(20, 20,Image.SCALE_DEFAULT);
         menu2.setIcon(new ImageIcon(image42));
-        menu2.setMnemonic('L');
+        menu2.setMnemonic('V');
         menu2.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L, ActionEvent.CTRL_MASK));
         menu2.setBackground(Color.WHITE);
         
@@ -97,20 +93,17 @@ public class Main extends JFrame implements ActionListener{
         menu2.addActionListener(this);
         
         
-        
-        
-        
         // --------------------------------------------------------------------------------------------
         
         
-        /* Second Column */
+        /* Bill column for customer homepage */
         JMenu bills = new JMenu("Bill");
         JMenuItem a1 = new JMenuItem("Pay Bill");
         JMenuItem a2 = new JMenuItem("Generate Bill");
         JMenuItem a3 = new JMenuItem("Bill Details");
         bills.setForeground(Color.RED);
         
-        /* ---- Pay Bill ---- */
+        /* Pay Bill */
         a1.setFont(new Font("Times New Roman",Font.PLAIN,12));
         ImageIcon icon4 = new ImageIcon(ClassLoader.getSystemResource("icon/icon13.jfif"));
         Image image4 = icon4.getImage().getScaledInstance(20, 20,Image.SCALE_DEFAULT);
@@ -119,22 +112,23 @@ public class Main extends JFrame implements ActionListener{
         a1.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, ActionEvent.CTRL_MASK));
         a1.setBackground(Color.WHITE);
         
+        /* Generate Bill*/
         a2.setFont(new Font("Times New Roman",Font.PLAIN,12));
         ImageIcon icon7 = new ImageIcon(ClassLoader.getSystemResource("icon/icon7.png"));
         Image image7 = icon7.getImage().getScaledInstance(20, 20,Image.SCALE_DEFAULT);
         a2.setIcon(new ImageIcon(image7));
-        a2.setMnemonic('R');
+        a2.setMnemonic('G');
         a2.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R, ActionEvent.CTRL_MASK));
         a2.setBackground(Color.WHITE);
         
        
         
-        /* ---- Last Bill ----*/
+        /* Bill Details*/
         a3.setFont(new Font("Times New Roman",Font.PLAIN,12));
         ImageIcon icon6 = new ImageIcon(ClassLoader.getSystemResource("icon/icon6.png"));
         Image image6 = icon6.getImage().getScaledInstance(20, 20,Image.SCALE_DEFAULT);
         a3.setIcon(new ImageIcon(image6));
-        a3.setMnemonic('L');
+        a3.setMnemonic('B');
         a3.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L, ActionEvent.CTRL_MASK));
         a3.setBackground(Color.WHITE);
         
@@ -143,57 +137,32 @@ public class Main extends JFrame implements ActionListener{
         a3.addActionListener(this);
         
         
- 
-        
         // -----------------------------------------------------------------------------------------------
         
-        /* Fourth Column*/
+        /* More Functions Column*/
         JMenu utility = new JMenu("More Functions");
         JMenuItem UTI1 = new JMenuItem("Calculator");
-        JMenuItem UTI2 = new JMenuItem("Notepad");
-        JMenuItem UTI3 = new JMenuItem("Web Browser");
         utility.setForeground(Color.RED); 
         
-        /* ---- Calender ---- */
+        /* Calculator*/
         UTI1.setFont(new Font("Times New Roman",Font.PLAIN,12));
         ImageIcon IC8 = new ImageIcon(ClassLoader.getSystemResource("icon/icon9.png"));
         Image img8 = IC8.getImage().getScaledInstance(20, 20,Image.SCALE_DEFAULT);
         UTI1.setIcon(new ImageIcon(img8));
-        UTI1.setMnemonic('C');
+        UTI1.setMnemonic('Q');
         UTI1.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C, ActionEvent.CTRL_MASK));
         UTI1.setBackground(Color.WHITE);
-        
-        /* ---- Calculator ---- */
-        UTI2.setFont(new Font("Times New Roman",Font.PLAIN,12));
-        ImageIcon IC9 = new ImageIcon(ClassLoader.getSystemResource("icon/icon12.png"));
-        Image img9 = IC9.getImage().getScaledInstance(20, 20,Image.SCALE_DEFAULT);
-        UTI2.setIcon(new ImageIcon(img9));
-        UTI2.setMnemonic('X');
-        UTI2.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, ActionEvent.CTRL_MASK));
-        UTI2.setBackground(Color.WHITE);
-        
-        /* ---- Web Browser ---- */
-        UTI3.setFont(new Font("Times New Roman",Font.PLAIN,12));
-        ImageIcon IC10 = new ImageIcon(ClassLoader.getSystemResource("icon/icon10.jfif"));
-        Image img10 = IC10.getImage().getScaledInstance(20, 20,Image.SCALE_DEFAULT);
-        UTI3.setIcon(new ImageIcon(img10));
-        UTI3.setMnemonic('W');
-        UTI3.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, ActionEvent.CTRL_MASK));
-        UTI3.setBackground(Color.WHITE);
-        
-        
+ 
         UTI1.addActionListener(this);
-        UTI2.addActionListener(this);
-        UTI3.addActionListener(this);
-        
+ 
         // ---------------------------------------------------------------------------------------
         
-        /*Fifth Column */
+        /*Logout Column */
         JMenu exit = new JMenu("Logout");
         JMenuItem ex = new JMenuItem("Logout");
         exit.setForeground(Color.BLUE);
         
-        /* ---- Exit ---- */
+        /* Logout */
         ex.setFont(new Font("Times New Roman",Font.PLAIN,12));
         ImageIcon IC11 = new ImageIcon(ClassLoader.getSystemResource("icon/icon11.png"));
         Image img11 = IC11.getImage().getScaledInstance(20, 20,Image.SCALE_DEFAULT);
@@ -221,9 +190,7 @@ public class Main extends JFrame implements ActionListener{
         
   
         utility.add(UTI1);
-        utility.add(UTI2);
-        utility.add(UTI3);
-        
+
         exit.add(ex);
          
         if(people.equals("Admin")){
@@ -255,17 +222,9 @@ public class Main extends JFrame implements ActionListener{
         }else if(str1.equals("Pay Bill")){
             new BillPay(meter).setVisible(true);
            
-        }else if(str1.equals("Notepad")){
-            try{
-                Runtime.getRuntime().exec("notepad.exe");
-            }catch(Exception e){ }
         }else if(str1.equals("Calculator")){
             try{
                 Runtime.getRuntime().exec("calc.exe");
-            }catch(Exception e){ }
-        }else if(str1.equals("Web Browser")){
-            try{
-                Runtime.getRuntime().exec("\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"");
             }catch(Exception e){ }
         }else if(str1.equals("Logout")){
             this.setVisible(false);

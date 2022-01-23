@@ -1,14 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package electricity.billing.system;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
 import java.util.*;
+import java.awt.*;
+import java.awt.event.*;
+
 
 public class AddNewCustomer extends JFrame implements ActionListener{
     JLabel JL1,JL2,JL3,JL4,JL5,JL6,JL7,JL8, JL11;
@@ -101,17 +99,13 @@ public class AddNewCustomer extends JFrame implements ActionListener{
         JP1.add(JB1);
         JP1.add(JB2);
         setLayout(new BorderLayout());
-        
         add(JP1,"Center");
         
         ImageIcon IC1 = new ImageIcon(ClassLoader.getSystemResource("icon/hicon1.png"));
         Image img3 = IC1.getImage().getScaledInstance(300, 300,Image.SCALE_DEFAULT);
         ImageIcon IC2 = new ImageIcon(img3);
         JL8 = new JLabel(IC2);
-        
-        
         add(JL8,"West");
-        //for changing the color of the whole Frame
         getContentPane().setBackground(new Color(255,253,208));
         
         JB1.addActionListener(this);
@@ -124,6 +118,7 @@ public class AddNewCustomer extends JFrame implements ActionListener{
     }
     public void actionPerformed(ActionEvent ae){
         if(ae.getSource() == JB1){
+
             String customer_name = JT1.getText();
             String customer_meter = JL11.getText();
             String customer_address = JT3.getText();
@@ -131,14 +126,14 @@ public class AddNewCustomer extends JFrame implements ActionListener{
             String customer_city = JT5.getText();
             String customer_email = JT6.getText();
             String customer_phone = JT7.getText();
-
+   
             String str1 = "insert into customer values('"+customer_name+"','"+customer_meter+"','"+customer_address+"','"+customer_city+"','"+customer_state+"','"+customer_email+"','"+customer_phone+"')";
             String str2 = "insert into login values('"+customer_meter+"', '', '', '', '')";
             try{
                 DBConnection con1 = new DBConnection();
                 con1.s.executeUpdate(str1);
                 con1.s.executeUpdate(str2);
-                JOptionPane.showMessageDialog(null," New Customer Details Successfully Added");
+                JOptionPane.showMessageDialog(null," New Customer Details Successfully Added");//dialog will be displayed if customer is added successfully 
                 this.setVisible(false);
                 new MeterDetails(customer_meter).setVisible(true);
 

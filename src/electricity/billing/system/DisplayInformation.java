@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package electricity.billing.system;
 
 import javax.swing.*;
@@ -16,7 +12,7 @@ public class DisplayInformation extends JFrame implements ActionListener{
         getContentPane().setBackground(new Color(250,128,114));
         setLayout(null);
         
-        JLabel label = new JLabel("DISPLAY CUSTOMER INFORMATION");
+        JLabel label = new JLabel("CUSTOMER INFORMATION");
         label.setBounds(200, 0, 550, 40);
         label.setFont(new Font("Helvetica", Font.BOLD, 25));
         label.setForeground(new Color(0,0,139));

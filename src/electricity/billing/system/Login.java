@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package electricity.billing.system;
 
 import java.awt.*;
@@ -21,7 +17,7 @@ public class Login extends JFrame implements ActionListener{
         setLayout(null);
         getContentPane().setBackground(new Color(255,253,208));
         
-        JL1 = new JLabel("UserName");
+        JL1 = new JLabel("Username");
         JL1.setBounds(300, 20, 100, 20);
         JL1.setFont(new Font("Times New Roman", Font.PLAIN, 15));
         add(JL1);

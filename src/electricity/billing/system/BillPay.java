@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package electricity.billing.system;
 
 import java.awt.*;
@@ -22,7 +19,7 @@ public class BillPay extends JFrame implements ActionListener{
         
         setBounds(550, 220, 800, 600);
         
-        JLabel label = new JLabel("Electric Bill");
+        JLabel label = new JLabel("Bill Payment");
         label.setFont(new Font("Helvetica", Font.BOLD, 30));
         label.setBounds(300, 15, 400, 30);
         label.setForeground(new Color(0,0,139));
@@ -175,4 +172,3 @@ public class BillPay extends JFrame implements ActionListener{
         new BillPay("").setVisible(true);
     }
 }
-

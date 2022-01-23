@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package electricity.billing.system;
 
 import java.awt.*;
@@ -68,6 +65,7 @@ public class BillGenerator extends JFrame implements ActionListener{
             String month = C1.getSelectedItem();
             JTA1.setText("TENAGA NASIONAL BERHAD\n ELECTRIC BILL OF "+month+",2022\n\n\n");
             
+            /*select customer details from customer table in database*/
             ResultSet rs = c.s.executeQuery("select * from customer where customer_meter="+meter);
             
             if(rs.next()){
@@ -81,7 +79,7 @@ public class BillGenerator extends JFrame implements ActionListener{
                 JTA1.append("\n**************************************************");
                 JTA1.append("\n");
             }
-            
+            /*select meter details from meter_details table in database*/
             rs = c.s.executeQuery("select * from meter_details where meter_number = " + meter);
             
             if(rs.next()){
@@ -91,32 +89,30 @@ public class BillGenerator extends JFrame implements ActionListener{
                 JTA1.append("\n    Billing Days:         "+rs.getString("billing_day"));
                 JTA1.append("\n");
             }
+            /*select the amount of taxes from taxes table in database*/
             rs = c.s.executeQuery("select * from taxes");
             if(rs.next()){
                 JTA1.append("---------------------------------------------------------------");
                 JTA1.append("\n\n");
                 JTA1.append("\n Cost per Unit:             RM "+rs.getString("cost_per_unit"));
                 JTA1.append("\n Meter Rent Fee:            RM "+rs.getString("rental_meter"));
-                JTA1.append("\n Service Taxes:             RM " +rs.getString("service_tax"));
-                JTA1.append("\n KWTBB                      RM "+rs.getString("KWTBB"));
+                JTA1.append("\n Service Taxes:              " +rs.getString("service_tax")+"%");
+                JTA1.append("\n KWTBB                       "+rs.getString("KWTBB")+"%");
                 JTA1.append("\n");
                 
             }
-            
+            /*select electricity bill details from electricBill table in database*/
             rs = c.s.executeQuery("select * from electricBill where meter="+meter+" AND bill_month = '"+C1.getSelectedItem()+"'");
             
             if(rs.next()){
-                JTA1.append("\n    Billing Month :     RM\t"+rs.getString("bill_month"));
-                JTA1.append("\n    Units Consumed:     RM \t"+rs.getString("units_used"));
+                JTA1.append("\n    Billing Month :     \t"+rs.getString("bill_month"));
+                JTA1.append("\n    Units Consumed:      \t"+rs.getString("units_used"));
                 JTA1.append("\n    Total Charges :     RM \t"+rs.getString("bill_amount"));
                 JTA1.append("\n---------------------------------------------------------------");
                 JTA1.append("\n    TOTAL AMOUNT PAID : RM  "+rs.getString("bill_amount"));
             }
             
-            
-            
-            
-            
+  
             
         }catch(Exception e){
             e.printStackTrace();
