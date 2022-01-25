@@ -1,10 +1,10 @@
 
 package electricity.billing.system;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
+import java.awt.*;
+import java.awt.event.*;
 
 public class BillPay extends JFrame implements ActionListener{
     JLabel JL1,JL2,JL3,JL4,JL5, JL6; //declare label JL1 to JL6

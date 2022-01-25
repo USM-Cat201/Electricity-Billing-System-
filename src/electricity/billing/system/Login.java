@@ -1,9 +1,9 @@
 package electricity.billing.system;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
+import java.awt.*;
+import java.awt.event.*;
 
 public class Login extends JFrame implements ActionListener{
     JLabel JL1,JL2,JL3, JL4;//declare label JL1 to JL4
@@ -104,14 +104,19 @@ public class Login extends JFrame implements ActionListener{
                 String str2  = JPF2.getText();//get the password 
                 String user = C1.getSelectedItem();//user choose either customer or admin
                 //name, password and choice are stored in str3
+
+                /*retrive data from database*/
                 String str3  = "select * from login where username = '"+str1+"' and password = '"+str2+"' and usertype = '"+user+"'";
                 ResultSet rs = c.s.executeQuery(str3);
                 if(rs.next()){
+                    /*validate user input by comparing with the username and password retrived from database
+                    where the meter_number is the same*/
                     String meter = rs.getString("meter_number");
                     new Main(meter, user).setVisible(true);
                     this.setVisible(false);
 
                 }else{
+                    /*display message when login is unsuccessful*/
                     JOptionPane.showMessageDialog(null, "Login Unsuccessful");
                     JTF1.setText("");
                     JPF2.setText("");
