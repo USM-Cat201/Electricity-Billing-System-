@@ -1,4 +1,4 @@
-
+/*this class includes the bill payment function  */
 package electricity.billing.system;
 
 import java.awt.*;

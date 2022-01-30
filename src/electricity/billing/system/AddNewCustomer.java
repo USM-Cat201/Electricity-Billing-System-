@@ -1,4 +1,4 @@
-
+/*class for add new customer function in admin homepage */
 package electricity.billing.system;
 
 import javax.swing.*;

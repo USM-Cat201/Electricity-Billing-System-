@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+/*class for admin to fill in meter details of customer*/
 package electricity.billing.system;
 
 import java.awt.*;
@@ -164,3 +161,4 @@ public class MeterDetails extends JFrame implements ActionListener{
         new MeterDetails("").setVisible(true);
     }
 }
+

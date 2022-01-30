@@ -1,3 +1,4 @@
+/*class for bill payment function whcih directs user to the payment page*/
 package electricity.billing.system;
 
 import java.awt.*;
@@ -25,7 +26,7 @@ public class Payment extends JFrame implements ActionListener{
         JEP.add(JB1);
 
         try {
-            JEP.setPage("https://www.tnb.com.my/residential/payment-methods");
+            JEP.setPage("https://tngportal.touchngo.com.my/tngPortal/login");
         }catch (Exception e) {
             JEP.setContentType("text/html");
             JEP.setText("<html>Could not load</html>");

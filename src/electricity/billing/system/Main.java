@@ -1,3 +1,4 @@
+/*class fot the user and admin homepage*/
 package electricity.billing.system;
 
 import java.awt.*;

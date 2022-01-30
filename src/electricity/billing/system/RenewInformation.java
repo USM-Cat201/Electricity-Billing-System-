@@ -1,3 +1,4 @@
+/*class for customer to renew information*/
 package electricity.billing.system;
 
 import javax.swing.*;

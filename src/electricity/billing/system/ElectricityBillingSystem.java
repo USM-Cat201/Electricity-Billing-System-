@@ -1,3 +1,4 @@
+/*this is not a function class but only a breif description of our system*/
 package electricity.billing.system;
 
 import java.awt.*;

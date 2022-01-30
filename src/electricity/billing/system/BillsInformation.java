@@ -1,3 +1,5 @@
+
+/*this is the class for displaying bill information in a table form*/
 package electricity.billing.system;
 
 import java.awt.*;
@@ -16,7 +18,7 @@ public class BillsInformation extends JFrame{
     BillsInformation(String meter){
         super("Bills");
         //set the size of panel
-        setSize(800,650);
+        setSize(900,650);
         setLocation(500,250);
         setLayout(null);
         getContentPane().setBackground(Color.LIGHT_GRAY);//set the background of panel as light gray
@@ -36,7 +38,7 @@ public class BillsInformation extends JFrame{
         
         
         JScrollPane span = new JScrollPane(JT1);
-        span.setBounds(50, 50, 550, 450);
+        span.setBounds(50, 50, 700, 450);
         add(span);
         
     }
