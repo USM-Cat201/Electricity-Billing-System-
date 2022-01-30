@@ -1,14 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package electricity.billing.system;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
 import java.util.*;
+import java.awt.*;
+import java.awt.event.*;
 
 public class MeterDetails extends JFrame implements ActionListener{
     JLabel JL1,JL2,JL3,JL4,JL5,JL6,JL7,JL8,JL9, JL10, JL11;//declare label from JL1 to JL11

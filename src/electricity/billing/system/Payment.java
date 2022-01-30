@@ -25,6 +25,7 @@ public class Payment extends JFrame implements ActionListener{
         JEP.add(JB1);
 
         try {
+            //direct customer to the payment page
             JEP.setPage("https://www.tnb.com.my/residential/payment-methods");
         }catch (Exception e) {
             JEP.setContentType("text/html");

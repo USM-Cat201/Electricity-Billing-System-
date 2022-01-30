@@ -1,8 +1,8 @@
 package electricity.billing.system;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing.*;
 
 public class Main extends JFrame implements ActionListener{
     String meter;
@@ -59,10 +59,7 @@ public class Main extends JFrame implements ActionListener{
         JM1.addActionListener(this);
         JM2.addActionListener(this);
         JM4.addActionListener(this);
-        
-        
-        
-        //-----------------------------
+    
         
         /* Information column for customer homepage */
         JMenu menu = new JMenu("Information");
@@ -91,10 +88,7 @@ public class Main extends JFrame implements ActionListener{
         
         menu1.addActionListener(this);
         menu2.addActionListener(this);
-        
-        
-        // --------------------------------------------------------------------------------------------
-        
+               
         
         /* Bill column for customer homepage */
         JMenu bills = new JMenu("Bill");
@@ -120,8 +114,7 @@ public class Main extends JFrame implements ActionListener{
         a2.setMnemonic('G');
         a2.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R, ActionEvent.CTRL_MASK));
         a2.setBackground(Color.WHITE);
-        
-       
+    
         
         /* Bill Details*/
         a3.setFont(new Font("Times New Roman",Font.PLAIN,12));
@@ -135,9 +128,6 @@ public class Main extends JFrame implements ActionListener{
         a1.addActionListener(this);
         a2.addActionListener(this);
         a3.addActionListener(this);
-        
-        
-        // -----------------------------------------------------------------------------------------------
         
         /* More Functions Column*/
         JMenu utility = new JMenu("More Functions");
@@ -154,8 +144,6 @@ public class Main extends JFrame implements ActionListener{
         UTI1.setBackground(Color.WHITE);
  
         UTI1.addActionListener(this);
- 
-        // ---------------------------------------------------------------------------------------
         
         /*Logout Column */
         JMenu exit = new JMenu("Logout");

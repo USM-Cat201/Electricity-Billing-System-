@@ -22,14 +22,14 @@ public class AddNewCustomer extends JFrame implements ActionListener{
         JP1.setLayout(null);
         JP1.setBackground(new Color(173,216,230));//background with light blue
         
-        //initialize label and put Adding New Customer as title  
+        //initialize label and set Adding New Customer as title  
         JLabel label = new JLabel("Adding New Customer");
         label.setBounds(100, 10, 350, 35);
         label.setFont(new Font("Helvetica", Font.BOLD, 30));
         label.setForeground(new Color(0,0,139));
         JP1.add(label);
         
-        //initialize JL1 customer name so the user will know what they should type 
+        //initialize JL1 as customer name so the user will know what they should type 
         JL1 = new JLabel("Customer Name:");
         JL1.setBounds(100, 80, 100, 20);
         JL1.setFont(new Font("Times New Roman", Font.PLAIN,15));        
@@ -38,7 +38,7 @@ public class AddNewCustomer extends JFrame implements ActionListener{
         JP1.add(JL1);
         JP1.add(JT1);
         
-        //initialize JL2 meter number
+        //initialize JL2 as meter number
         JL2 = new JLabel("Meter Number:");
         JL2.setBounds(100, 120, 100, 20);
         JL2.setFont(new Font("Times New Roman", Font.PLAIN,15));        
@@ -47,7 +47,7 @@ public class AddNewCustomer extends JFrame implements ActionListener{
         JP1.add(JL2);
         JP1.add(JL11);
         
-        //initialize JL3 address of user
+        //initialize JL3 as address of user
         JL3 = new JLabel("Residental Address: ");
         JL3.setBounds(100, 160, 125, 20);
         JL3.setFont(new Font("Times New Roman", Font.PLAIN,15));        
@@ -56,7 +56,7 @@ public class AddNewCustomer extends JFrame implements ActionListener{
         JP1.add(JL3);
         JP1.add(JT3);
         
-        //initialize JL5 city of the customer
+        //initialize JL5 as city of the customer
         JL5 = new JLabel("Residenal City: ");
         JL5.setBounds(100, 200, 110, 20);
         JL5.setFont(new Font("Times New Roman", Font.PLAIN,15));
@@ -65,7 +65,7 @@ public class AddNewCustomer extends JFrame implements ActionListener{
         JP1.add(JL5);
         JP1.add(JT5);
         
-        //initialize JL4 state of the customer
+        //initialize JL4 as state of the customer
         JL4 = new JLabel("Residental State: ");
         JL4.setBounds(100, 240, 110, 20);
         JL4.setFont(new Font("Times New Roman", Font.PLAIN,15));
@@ -74,7 +74,7 @@ public class AddNewCustomer extends JFrame implements ActionListener{
         JP1.add(JL4);
         JP1.add(JT4);
         
-        //initialize JL6 email of the customer
+        //initialize JL6 as email of the customer
         JL6 = new JLabel("Customer Email: ");
         JL6.setBounds(100, 280, 110, 20);
         JL6.setFont(new Font("Times New Roman", Font.PLAIN,15));
@@ -83,7 +83,7 @@ public class AddNewCustomer extends JFrame implements ActionListener{
         JP1.add(JL6);
         JP1.add(JT6);
 
-        //initialize JL7 phone number of the customer
+        //initialize JL7 as phone number of the customer
         JL7 = new JLabel("Customer Phone: ");
         JL7.setBounds(100, 320, 110, 20);
         JL7.setFont(new Font("Times New Roman", Font.PLAIN,15));
@@ -94,9 +94,9 @@ public class AddNewCustomer extends JFrame implements ActionListener{
         
         //initialize button JB1 as proceed,when user click this button, a new customer will be added
         JB1 = new JButton("Proceed");
-        JB1.setBounds(120, 390, 100, 25);  
-        //initialize button JB2 as cancel,when user click this button, the operation before will be canceled and 
-        //there is no new customer be added
+        JB1.setBounds(120, 390, 100, 25); 
+
+        //initialize button JB2 as cancel,when user click this button, the operation before will be canceled and     //there is no new customer be added
         JB2 = new JButton("Cancel");
         JB2.setBounds(250, 390, 100, 25);        
         
