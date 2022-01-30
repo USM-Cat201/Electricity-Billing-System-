@@ -1,9 +1,9 @@
 /*class for customer to renew information*/
 package electricity.billing.system;
 
+import java.sql.*;
 import javax.swing.*;
 import java.awt.*;
-import java.sql.*;
 import java.awt.event.*;
 
 public class RenewInformation extends JFrame implements ActionListener{
@@ -117,6 +117,7 @@ public class RenewInformation extends JFrame implements ActionListener{
         
         try{
             DBConnection c = new DBConnection();
+            //retrieve data from database
             ResultSet rs = c.s.executeQuery("select * from customer where customer_meter = '"+meter+"'");
             while(rs.next()){
                 JL1.setText(rs.getString(1));
@@ -150,7 +151,7 @@ public class RenewInformation extends JFrame implements ActionListener{
             
             try{
                 DBConnection c = new DBConnection();
-                //update data in table customer
+                //update data in table customer in database
                 c.s.executeUpdate("update customer set customer_address = '"+str3+"', customer_city = '"+str4+"', customer_state = '"+str5+"', customer_email = '"+str6+"', customer_phone = '"+str7+"' where customer_meter = '"+meter+"'");
                 JOptionPane.showMessageDialog(null, "Customer Details Updated Successfully");
                 this.setVisible(false);

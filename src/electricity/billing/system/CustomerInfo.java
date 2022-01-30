@@ -1,10 +1,10 @@
 /*class for displaying customer information in a table form in admin homepage*/
 package electricity.billing.system;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
+import java.awt.*;
+import java.awt.event.*;
 
 public class CustomerInfo extends JFrame implements ActionListener{
  

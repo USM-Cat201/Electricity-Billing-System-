@@ -1,11 +1,11 @@
 /*class for admin to fill in meter details of customer*/
 package electricity.billing.system;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
 import java.util.*;
+import java.awt.*;
+import java.awt.event.*;
 
 public class MeterDetails extends JFrame implements ActionListener{
     JLabel JL1,JL2,JL3,JL4,JL5,JL6,JL7,JL8,JL9, JL10, JL11;//declare label from JL1 to JL11

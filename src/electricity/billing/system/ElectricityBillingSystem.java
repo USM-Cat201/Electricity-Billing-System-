@@ -1,11 +1,9 @@
 /*this is not a function class but only a breif description of our system*/
 package electricity.billing.system;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-
-import javax.swing.*;
-
 import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.border.Border;

@@ -2,11 +2,11 @@
 /*this is the class for displaying bill information in a table form*/
 package electricity.billing.system;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
 import net.proteanit.sql.DbUtils;
+import java.awt.*;
+import java.awt.event.*;
 
 public class BillsInformation extends JFrame{
  

@@ -1,10 +1,10 @@
 /*this is the class for bill calculation function in admin homepage*/
 package electricity.billing.system;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
+import java.awt.*;
+import java.awt.event.*;
 
 public class BillsCalculation extends JFrame implements ActionListener{
     JLabel JL1,JL2,JL3,JL4,JL5; //declare FIVE labels from JL1 to JL5
@@ -179,7 +179,7 @@ public class BillsCalculation extends JFrame implements ActionListener{
             float total_amount_2;
             float total_amount_3;
             
-            //Demonstrate the calculation of total amount of bill_amount
+            //perform the calculation of total amount of bill_amount
             try{
                 DBConnection c = new DBConnection();
                 ResultSet rs = c.s.executeQuery("select * from taxes");

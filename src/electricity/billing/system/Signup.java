@@ -145,7 +145,7 @@ public class Signup extends JFrame implements ActionListener{
                     //if user choose as admin, meter_number, username,fullname, password and user type will be inserted
                     str = "insert into login values('"+meter_number+"', '"+username+"', '"+fullname+"', '"+password+"', '"+usertype+"')";
                 }else{
-                    //if the option is customer
+                    //if the option is customer, update the login table in database where the meter_number is the same
                     str = "update login set username = '"+username+"', fullname = '"+fullname+"',password = '"+password+"', usertype = '"+usertype+"' where meter_number = '"+JT4.getText()+"'";
                 }
                 

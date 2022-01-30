@@ -2,10 +2,10 @@
 the bill amount will be retrieved form the database and display when bill is generated*/
 package electricity.billing.system;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
+import java.awt.*;
+import java.awt.event.*;
 
 public class BillGenerator extends JFrame implements ActionListener{
     JButton JB1;//declare button JB1
