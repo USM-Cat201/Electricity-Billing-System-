@@ -1,3 +1,4 @@
+/*class for login function*/
 package electricity.billing.system;
 
 import javax.swing.*;

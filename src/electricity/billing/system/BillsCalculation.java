@@ -1,3 +1,4 @@
+/*this is the class for bill calculation function in admin homepage*/
 package electricity.billing.system;
 
 import javax.swing.*;

@@ -1,3 +1,4 @@
+/*class for displaying customer information in a table form in admin homepage*/
 package electricity.billing.system;
 
 import javax.swing.*;

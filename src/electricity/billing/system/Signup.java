@@ -1,3 +1,4 @@
+/*class for sign up function*/
 package electricity.billing.system;
 
 import javax.swing.*;
@@ -165,3 +166,4 @@ public class Signup extends JFrame implements ActionListener{
         new Signup().setVisible(true);
     }
 }
+

@@ -1,4 +1,5 @@
-
+/*class for generate bill function in customer homepage
+the bill amount will be retrieved form the database and display when bill is generated*/
 package electricity.billing.system;
 
 import javax.swing.*;
@@ -65,7 +66,7 @@ public class BillGenerator extends JFrame implements ActionListener{
             DBConnection c = new DBConnection();
    
             String month = C1.getSelectedItem();
-            JTA1.setText("TENAGA NASIONAL BERHAD\n ELECTRIC BILL OF "+month+",2022\n\n\n");
+            JTA1.setText("ELECTRICITY BILL OF "+month+",2022\n\n\n");
             
             /*select customer details from customer table in database*/
             ResultSet rs = c.s.executeQuery("select * from customer where customer_meter="+meter);

@@ -1,3 +1,4 @@
+/*create connection with MySQL database*/
 package electricity.billing.system;
 
 import java.sql.*;  

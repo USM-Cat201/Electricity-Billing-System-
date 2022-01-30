@@ -1,4 +1,4 @@
-
+/*class for admin to fill in meter details of customer*/
 package electricity.billing.system;
 
 import javax.swing.*;
@@ -161,3 +161,4 @@ public class MeterDetails extends JFrame implements ActionListener{
         new MeterDetails("").setVisible(true);
     }
 }
+

@@ -1,3 +1,4 @@
+/*class for displaying customer own information for customer homepage*/
 package electricity.billing.system;
 
 import javax.swing.*;
